@@ -45,7 +45,7 @@ function Node({ node, depth }: { node: TNode; depth: number }) {
             {isOpen ? "-" : "+"} {node.name}
           </button>
           {isOpen &&
-            node?.children?.map((child) => (
+            node.children.map((child) => (
               <Node node={child} depth={depth + 1} />
             ))}
         </li>
